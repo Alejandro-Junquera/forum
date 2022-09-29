@@ -11,4 +11,10 @@ class ForumController extends Controller
         $forums=Forum::latest()->paginate(5);
         return view('forums.index',compact('forums'));
     }
+    public function show(Forum $forum)  // Con esto estamos inyectando el Foro completo
+	{
+		$posts = $forum->posts()->with(['owner'])->paginate(2);
+        return view('forums.detail', compact('forum','posts'));
+	}
+
 }

@@ -17,7 +17,7 @@ Route::get('/hola/{nombre}', function ($nombre) {
     return 'Hola '.$nombre;
 });
 
-Route::get('controlador/{nombre}','PruebaController@nombre');
+Route::get('/forum/{forum}','ForumController@show');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
