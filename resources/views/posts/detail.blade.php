@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
-    	<h1 class="text-center text-mute"> {{ __("Respuestas al debate :name", ['name' => $post->title]) }} </h1>
+    	
         <h4>{{ __("Autor del debate") }}: {{ $post->owner->name }}</h4>
 	
         <a href="../forums/{{ $post->forum->id }}" class="btn btn-info pull-right">
