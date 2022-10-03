@@ -22,8 +22,6 @@ class CreateRepliesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->text('reply');   // Respuesta del Post
             $table->timestamps();
-
-            $table->timestamps();
         });
     }
 
